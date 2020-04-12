@@ -1,0 +1,135 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  --text: #151951;
+  --primary-tint: #F8FAFE;
+  --secondary-tint: #E1EBFF;
+  --line: #ECECF5;
+  --background: #FFFFFF;
+  --code: #011627;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --text: #FFFFFF;
+    --primary-tint: #10144b;
+    --secondary-tint: #1e225c;
+    --line: #424464;
+    --background: #01111f;
+    --code: #00080f;
+  }
+}
+
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  color: var(--text);
+  font-weight: 500;
+  margin: 0;
+  background-color: var(--background);
+}
+
+main[id=pages] {
+  margin: 4em 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Barlow', serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 38px;
+	line-height: 46px;
+}
+
+@media (min-width: 700px) {
+  h1 {
+    font-size: 38px;
+    line-height: 46px;
+  }
+}
+
+h2 {
+  font-size: 34px;
+	line-height: 42px;
+}
+
+h3 {
+  font-size: 28px;
+	line-height: 36px;
+}
+
+a {
+  text-decoration: none;
+  padding-bottom: 0.1em;
+  border-bottom: 1px dotted mediumvioletred;
+}
+
+a:link,
+a:visited {
+  color: var(--text);
+}
+
+li {
+  padding: 0.25em 0;
+  margin: auto;
+  list-style: url(../assets/svg/list-item-light.svg);
+}
+
+.basework-button {
+  display: block;
+  letter-spacing: 0.75px;
+  line-height: 20px;
+  width: fit-content;
+  align-self: center;
+  color: var(--text);
+  text-decoration: none;
+  text-align: center;
+  padding: 0.75em 1.5em;
+  background-color: var(--primary-tint);
+  cursor: pointer;
+  user-select: none;
+  margin: 0.3em;
+  border-radius: 100px;
+  border: none;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.basework-button:hover {
+  filter: brightness(110%) saturate(110%);
+}
+
+blockquote {
+  border-left: 2px solid var(--line);
+  max-width: 300px;
+  margin: 1em auto;
+}
+
+@media (min-width: 700px) {
+  blockquote {
+    max-width: 460px;
+  }
+}
+
+blockquote p {
+  padding: 0 1em;
+}
+
+.hidden {
+  display: none;
+}

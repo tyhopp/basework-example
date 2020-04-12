@@ -1,0 +1,19 @@
+{
+  "name": "basework-example",
+  "version": "0.0.1",
+  "description": "An example site that uses Basework",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "basework start",
+    "build": "basework build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "basework": "file:../basework/basework-0.0.1.tgz",
+    "node-fetch": "^2.6.0"
+  }
+}

@@ -1,0 +1,23 @@
+page-index {
+  display: block;
+  margin: 0 auto;
+  padding: 0 1em;
+  max-width: 440px;
+}
+
+@media (max-width: 350px) {
+  page-index {
+    padding: 0 0.5em;
+  }
+}
+
+.index-title {
+  text-align: center;
+  margin: 0;
+}
+
+.index-title-emoji {
+  width: 36px;
+  height: 36px;
+  padding-left: 0.25em;
+}
