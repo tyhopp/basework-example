@@ -1,6 +1,6 @@
 {
   "name": "basework-example",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "An example site that uses Basework",
   "private": true,
   "main": "index.js",
@@ -11,9 +11,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "basework": "file:../basework/basework-0.0.1.tgz",
+    "basework-core": "0.0.2",
     "node-fetch": "^2.6.0"
   }
 }
