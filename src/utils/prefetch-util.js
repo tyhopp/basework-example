@@ -18,8 +18,16 @@ function getUrlParts(url) {
 
 // TODO - Do this in a worker
 function prefetchNextPageData(currentPage) {
-  const anchors = Array.from(currentPage.querySelectorAll(`a[href^="/"]`));
-  const paths = new Set(anchors.map(anchor => getUrlParts(anchor.href).pathname.replace(/\//, '')));
+
+  // Get all internal links on the page
+  const anchors = Array.from(currentPage.querySelectorAll(`a[href^="/"]`))
+    .map(anchor => getUrlParts(anchor.href).pathname.replace(/\//, ''))
+    .filter(anchor => anchor.length);
+
+  // Ensure paths to internal pages are unique
+  const paths = new Set(anchors);
+
+  // Fetch the next page's data ahead of time
   const requests = Array.from(paths).map(path => xhr(`${path}-data.json`));
   Promise.all(requests)
     .catch(error => {
