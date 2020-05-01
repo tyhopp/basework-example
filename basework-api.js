@@ -1,5 +1,5 @@
 const createSubPages = async () => {
-  console.log('Created sub page');
+  // Custom build step goes here
 }
 
 module.exports = {

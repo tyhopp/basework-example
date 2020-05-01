@@ -6,7 +6,6 @@ const baseworkConfig = () => ({
     'transform',
     'bundle',
     'create',
-    'createSubPages',
     'prerender'
   ]
 });
