@@ -34,7 +34,7 @@ class Index extends HTMLElement {
   }
 
   setData({ data }) {
-    importCard.then(() => {
+    return importCard.then(() => {
       data.forEach(({ title, body }) => {
         const card = document.createElement('basework-card');
         this._cards.appendChild(card);

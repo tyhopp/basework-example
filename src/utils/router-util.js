@@ -20,7 +20,10 @@ import { prefetchNextPageData } from './prefetch-util';
     try {
       const json = JSON.parse(data);
       if (pageElem.setData && typeof pageElem.setData === 'function') {
-        pageElem.setData(json);
+        pageElem.setData(json)
+          .then(() => {
+            dispatchEvent(new CustomEvent('basework-complete', { bubbles: true }));
+          });
       }
     } catch (error) {
       console.error('Failed to parse page data', error);
@@ -56,10 +59,11 @@ import { prefetchNextPageData } from './prefetch-util';
     // Fetch bundle and render template
     import(/* webpackChunkName: "[request]", webpackInclude: /\.js$/ */ `../pages/${page}`).then(() => {
       const pageElem = createPage(page);
-      xhr(`${page}-data.json`).then(data => {
-        setPageData(pageElem, data);
-        prerenderNextPages(pageElem, !isPrerendering);
-      });
+      xhr(`${page}-data.json`)
+        .then(data => {
+          setPageData(pageElem, data);
+          prerenderNextPages(pageElem, !isPrerendering);
+        });
     });
   }
 
