@@ -16,6 +16,6 @@
   "license": "MIT",
   "dependencies": {
     "basework-core": "^0.1.7",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   }
 }
