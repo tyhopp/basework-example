@@ -15,7 +15,7 @@
   "author": "Ty Hopp",
   "license": "MIT",
   "dependencies": {
-    "basework-core": "0.1.5",
+    "basework-core": "^0.1.7",
     "node-fetch": "^2.6.0"
   }
 }
